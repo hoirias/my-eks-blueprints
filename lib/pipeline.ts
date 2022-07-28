@@ -1,4 +1,3 @@
-// lib/pipeline.ts
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as blueprints from '@aws-quickstart/eks-blueprints';
@@ -18,10 +17,10 @@ export default class PipelineConstruct extends Construct {
   
     blueprints.CodePipelineStack.builder()
       .name("eks-blueprints-workshop-pipeline")
-      .owner("your-github-username")
+      .owner("hoirias")
       .repository({
-          repoUrl: 'your-repo-name',
-          credentialsSecretName: 'github-token',
+          repoUrl: 'my-eks-blueprints',
+          credentialsSecretName: 'github-token-re',
           targetRevision: 'main'
       })
       // WE ADD THE STAGES IN WAVE FROM THE PREVIOUS CODE
